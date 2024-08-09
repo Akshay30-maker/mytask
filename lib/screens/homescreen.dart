@@ -6,6 +6,7 @@ import '../blocs/homepage_news/homepage_news_bloc.dart';
 import '../constatnts/appbar.dart';
 import '../constatnts/color_constants.dart';
 import '../constatnts/constants.dart';
+import '../constatnts/no_internet_screen.dart';
 import '../screens/helper/theme_provider.dart';
 import 'news_details_screen.dart';
 
@@ -143,15 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
             if (state is NewsApiError) {
-              return Center(
-                child: Text(
-                  "Request time Out",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontFamily: 'Nunito-Medium',
-                  ),
-                ),
-              );
+              return NoInternetScreen();
             }
             return Center(
               child: CircularProgressIndicator(

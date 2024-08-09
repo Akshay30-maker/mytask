@@ -22,7 +22,6 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
-      appBar: commonAppBar(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
